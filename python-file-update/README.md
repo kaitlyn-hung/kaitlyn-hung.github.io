@@ -39,4 +39,19 @@ with open(import_file, "w") as file:
 
 
 ### How It Works
+1. **Specify input files** – The script defines two files: one containing the current list of approved addresses (allowed_hosts.txt) and another containing addresses to remove (removed_hosts.txt).
+
+2. **Read and split the data** – Both files are opened and read into memory. The contents are split into lists so each address can be processed individually.
+
+3. **Remove unwanted addresses** – The script loops through the remove list and checks if each address exists in the allowed list. If it does, it is removed.
+
+4. **Update the file** – After all removals, the allowed addresses list is converted back into a newline-separated string and written back to the original file, updating it with the changes.  
+
+<br>
+
+### Relevance to Cybersecurity 
+Managing access to sensitive systems is a critical part of cybersecurity. By automating updates to the allowed IP addresses list, I ensure that **unauthorized** IP addresses are promptly removed, reducing the risk of unauthorized access. This demonstrates how scripting and automation can help maintain secure environments and **enforce access control policies** efficiently.  
+<br>
+
+---
 
